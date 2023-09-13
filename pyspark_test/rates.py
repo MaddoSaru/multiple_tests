@@ -1,4 +1,3 @@
-#import pandas as pd
 import requests
 from typing import List, Optional
 from dotenv import load_dotenv
@@ -19,7 +18,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 sc = spark.sparkContext
 
-def get_spark_df(
+def get_exchange_rates_spark_df(
     currency : str,
 ):
     url = f'https://min-api.cryptocompare.com/data/v2/histohour?fsym={currency}&tsym=USD&limit=100&api_key={api_key}'    
@@ -28,6 +27,6 @@ def get_spark_df(
     df = spark.read.json(json_rdd)
     return df
 
-df = get_spark_df('BTC')
+df = get_exchange_rates_spark_df('BTC')
 
-print(df.select(df.Data).show())
+print(df.select(df.Data.getItem('Data')).show())
