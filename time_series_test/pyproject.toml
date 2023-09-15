@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "time-series-test"
+version = "0.1.0"
+description = ""
+authors = ["MaddoSaru <riquelme.madmonkey@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.0"
+mysql-connector-python = "^8.1.0"
+pandas = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
