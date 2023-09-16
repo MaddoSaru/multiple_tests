@@ -108,4 +108,4 @@ def add_currencies(
 ) -> None:
     for currency in currencies:
         insert_rates_values(currency = currency, table_name = table_name, endpoint = endpoint, method = method)
-    return 'Load Succesfully'
+    return 200
