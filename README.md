@@ -14,6 +14,11 @@ Request some raw data \
 Transform the data \
 Insert values in an SQL table
 
-### Time Series Test
+### Sreamlit Test
 
+Create a basic Streamlit App
+
+### PDF to TXT Test
+
+Extract the text from a .pdf file and copy it into a .txt file
 
