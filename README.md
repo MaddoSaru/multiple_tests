@@ -22,3 +22,7 @@ Create a basic Streamlit App
 
 Extract the text from a .pdf file and copy it into a .txt file
 
+
+### Time Series Test
+
+Try SARIMAX time series functions
